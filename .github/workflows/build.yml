@@ -34,8 +34,8 @@ jobs:
           keyPassword: ${{ secrets.KEY_STORE_PASS }}
       env:
           BUILD_TOOLS_VERSION: "30.0.2"
-      - name: Update apk
-     uses: actions/upload-artifact@v2
-        with:
+    - name: Update apk
+      uses: actions/upload-artifact@v2
+      with:
           name: Upload signed app bundle
           path: ${{steps.sign_app.outputs.signedReleaseFile}}
